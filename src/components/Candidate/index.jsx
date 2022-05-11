@@ -1,23 +1,18 @@
 import { useEffect, useState } from "react"
 
-export function Candidate({numberOfCandidates}){
-  const [candidates, setCandidates] = useState([])
+export function Candidate(){
+  
 
   // useEffect(() => {
   //   console.log(candidates)
   // }, [setCandidates])
 
-  function handleCreateCandidateElement() {
-    
-  }
-
-  while(numberOfCandidates > 0) {
-    numberOfCandidates--
+  // function handleCreateCandidateElement() { 
+  // }
     return (
       <div className="register-candidate">
         <label htmlFor="candidate-name">Nome do candidato</label>
-        <input type="text" />
+        <input type="text" minLength="1" />
       </div>
     )
-  }
 }

@@ -5,10 +5,10 @@ import { Elections } from '../Elections'
 import './style.css'
 
 export function CreateElectionPage() {
-  const [numberOfCandidates, setNumberOfCandidates] = useState(0)
+  const [numberOfCandidates, setNumberOfCandidates] = useState([])
 
   function handleAddNewCandidate(event) {
-    setNumberOfCandidates(event)
+    setNumberOfCandidates(prevState => [...prevState, event])
   }
 
   return (
@@ -53,11 +53,13 @@ export function CreateElectionPage() {
       </form>
 
       {
-        numberOfCandidates !== 0 ? (
-          <Candidate numberOfCandidates={numberOfCandidates} />
-        ) : (
-          console.log('sem novas eleições')
-        )
+        Object.entries(numberOfCandidates).map(() => {
+          return (
+            <Candidate 
+              key={numberOfCandidates.indexOf()}
+            />
+          )
+        })
       }
     </>
   )

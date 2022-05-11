@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='election' element={<CreateElectionPage />} />
+        <Route path='/election' element={<CreateElectionPage />} />
         {/* </Route> */}
       </Routes>
     </React.StrictMode>
