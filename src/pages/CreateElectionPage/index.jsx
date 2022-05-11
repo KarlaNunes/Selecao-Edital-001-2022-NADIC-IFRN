@@ -1,7 +1,7 @@
 import { Button } from '../../components/Button'
 import './style.css'
 
-export function Election() {
+export function CreateElectionPage() {
   return (
     <form>
         <div className="election-name">
