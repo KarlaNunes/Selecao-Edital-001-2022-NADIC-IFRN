@@ -6,22 +6,11 @@ import './style.css'
 
 export function CreateElectionPage() {
   const [candidates, setCandidates] = useState([])
-  const [numberOfCandidates, setNumberOfCandidates] = useState(0)
 
   function handleAddNewCandidate(event) {
     if(event >= 1) {
-      setNumberOfCandidates(event)
       setCandidates(prevState => [...prevState, event])
     }
-  }
-
-  function handleCreateCandidateElement() {
-    Object.entries(candidates).map((item) => {
-      console.log(item)
-      return (
-        <Candidate key={Math.random()} />
-      )
-    })
   }
 
   return (
@@ -69,11 +58,7 @@ export function CreateElectionPage() {
       </form>
 
       {
-        // useEffect(() => {
-        //   console.log('mudei :)')
-        // }, [setNumberOfCandidates])
-        Object.entries(candidates).map((item) => {
-          console.log(item)
+        Object.entries(candidates).map(() => {
           return (
             <Candidate key={Math.random()} />
           )
