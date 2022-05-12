@@ -12,7 +12,7 @@ export function Candidate(){
     return (
       <div className="register-candidate">
         <label htmlFor="candidate-name">Nome do candidato</label>
-        <input type="text" minLength="1" />
+        <input type="text" />
       </div>
     )
 }
