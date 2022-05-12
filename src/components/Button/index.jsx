@@ -1,8 +1,8 @@
 import './style.css'
 
-export function Button({title}) {
+export function Button({title, onClicked}) {
   return (
-    <button type="button" className='button-home'>
+    <button type="button" onClick={onClicked}>
       {title}
     </button>
   )

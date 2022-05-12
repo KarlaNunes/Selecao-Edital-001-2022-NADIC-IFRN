@@ -54,16 +54,21 @@ export function CreateElectionPage() {
             Criar nova Eleição
           </button> */}
 
-        <Button title="Criar nova eleição" />
+        {
+          Object.entries(candidates).map(() => {
+            return (
+              <Candidate key={Math.random()} />
+            )
+          })
+        }
+
+        <Button 
+          title="Criar nova eleição" 
+          onClicked={() => console.log('button clicked! New el. created')}
+        />
       </form>
 
-      {
-        Object.entries(candidates).map(() => {
-          return (
-            <Candidate key={Math.random()} />
-          )
-        })
-      }
+      
     </>
   )
 }

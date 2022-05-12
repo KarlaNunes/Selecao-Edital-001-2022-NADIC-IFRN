@@ -1,4 +1,4 @@
-.button-home {
+button {
   width: 50%;
   padding: 24px;
   font-weight: 700;
@@ -12,8 +12,9 @@
 
   cursor: pointer;
   transition: filter 0.2s;
-  font-size: 16px;
+  font-size: 20px;
 }
-.button-home:hover {
+
+button:hover {
   filter: brightness(0.9);
 }
