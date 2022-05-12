@@ -1,17 +1,33 @@
 import { useState, useEffect } from 'react'
+import { Link, Outlet } from "react-router-dom";
+
 import { Button } from '../../components/Button'
 import { Candidate } from '../../components/Candidate'
-import { Elections } from '../Elections'
+import { Election } from '../../components/Election';
+import { ElectionsPage } from '../ElectionsPage';
 import './style.css'
 
 export function CreateElectionPage() {
   const [candidates, setCandidates] = useState([])
+
+  const [elections, setElections] = useState([])
+  const [electionName, setElectionName] = useState('')
 
   function handleAddNewCandidate(event) {
     if(event >= 1) {
       setCandidates(prevState => [...prevState, event])
     }
   }
+
+  function handleCreateNewElection() {
+    const newElection = {
+      name: electionName
+    }
+
+    setElections(prevState => [...prevState,newElection])
+    console.log(elections)
+  }
+
 
   return (
     <>
@@ -21,7 +37,7 @@ export function CreateElectionPage() {
           <input
             type="text"
             placeholder="Digite seu nome..."
-            // onChange={event => setStudentName(event.target.value)}
+            onChange={event => setElectionName(event.target.value)}
           />
         </div>
 
@@ -44,15 +60,9 @@ export function CreateElectionPage() {
           <input
             type="number"
             placeholder="Quantidade de candidatos"
-            onChange={event => {
-              handleAddNewCandidate(event.target.value)
-            }}
+            onChange={event => handleAddNewCandidate(event.target.value)}
           />
         </div>
-
-        {/* <button type="button">
-            Criar nova Eleição
-          </button> */}
 
         {
           Object.entries(candidates).map(() => {
@@ -64,11 +74,15 @@ export function CreateElectionPage() {
 
         <Button 
           title="Criar nova eleição" 
-          onClicked={() => console.log('button clicked! New el. created')}
+          onClicked={handleCreateNewElection}
         />
-      </form>
 
-      
+        {
+          Object.entries(elections).map(() => {
+            return <Election key={Math.random()} />
+          })
+        }
+      </form>   
     </>
   )
 }

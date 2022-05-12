@@ -40,3 +40,13 @@ form input {
   font-size: 19px;
   padding: 20px;
 }
+
+button {
+  width: 250px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+}
