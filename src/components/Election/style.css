@@ -1,0 +1,33 @@
+.container {
+  width: 100%;
+  display: block;
+  background-color: #9C9AB6;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.container button {
+  margin: 0;
+  width: 210px;
+  height: 50px;
+  font-size: 20px;
+  /* padding: 20px; */
+}
+
+.container select {
+  width: 193px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 18px;
+}
