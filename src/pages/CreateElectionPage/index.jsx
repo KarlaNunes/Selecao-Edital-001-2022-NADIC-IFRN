@@ -27,10 +27,10 @@ export function CreateElectionPage() {
       name: electionName,
       dateBegin: electionDateBegin,
       dateEnd: electionDateEnd,
-      participantCandidates: candidates
+      // participantCandidates: candidates
     }
     
-    setElections(prevState => [...prevState,newElection])
+    setElections(prevState => [...prevState, newElection])
   }
 
 
@@ -89,25 +89,26 @@ export function CreateElectionPage() {
           })
         }
 
-        {/* <Link to="/vote"> */}
-          <Button 
-            title="Criar nova eleição" 
-            // onClicked={handleCreateNewElection}
-          />
         
-        {/* </Link> */}
+        <Button 
+          title="Criar nova eleição" 
+          onClicked={handleCreateNewElection}
+        />
 
         {
           Object.entries(elections).map(() => {
-            console.log('testing with taylor ', Object.values(elections))
-            // return (
-            //   <Election
-            //     key={Math.random()} 
-            //     name={elections[name]}
-            //   />
-            // )
+            return (
+              <Election 
+                key={Math.random()}
+                name={electionName}
+                dateBegin={electionDateBegin}
+                dateEnd={electionDateEnd}
+              />
+
+            ) 
           })
         }
+        
       </form>   
     </>
   )
