@@ -31,6 +31,7 @@ form label {
 }
 
 form input {
+  background-color: rgba(0, 0, 0, 0.09);
   border: 1px solid #9C9AB6;
   border-radius: 5px;
   flex: 1;

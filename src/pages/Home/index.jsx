@@ -6,7 +6,6 @@ import './style.css';
 export function Home() {
   return (
     <div>
-      <h1>Bem vindo(a)!</h1>
       
       <Link to="/election" className='link'> 
         <Button title="Criar nova Eleição" />
