@@ -1,4 +1,4 @@
-export function ElectionsPage({ numberOfElections }) {
+export function ElectionsPage() {
   const [elections, setElections] = useState([])
   return (
     <>

@@ -1,0 +1,18 @@
+header {
+  background-color: #EA4C89;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header img {
+  margin-left: 30px;
+  height: 20px;
+  transition: filter 0.2s;
+}
+
+header img:hover {
+  cursor: pointer;
+  filter: brightness(0.4);
+}
