@@ -22,7 +22,7 @@ export function Home() {
             <Button title="Criar nova Eleição" />
           </Link> 
 
-          <Link to="/" className='link'> 
+          <Link to="/signIn" className='link'> 
             <Button title="Votar" />
           </Link>
         </div>
