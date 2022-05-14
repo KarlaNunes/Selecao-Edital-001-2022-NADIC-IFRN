@@ -31,7 +31,7 @@
   justify-content: center;
 }
 
-input {
+.links-container input {
   background-color: #E5E5E5;
   border: none;
   width: 250px;
