@@ -1,5 +1,36 @@
+.home-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+}
+
+.img-background {
+  width: 50%;
+  height: 100%;
+  background: url(../../assets/people-voting.jpg) no-repeat right;
+  background-size: cover;
+  object-fit: cover;
+  margin: 0;
+}
+
+.text-container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
 .link {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+button {
+  margin-bottom: 20px;
 }

@@ -1,16 +1,13 @@
-import { useState, useEffect } from 'react'
-import { Link, Outlet } from "react-router-dom";
+import { useState } from 'react'
 
 import { Button } from '../../components/Button'
 import { Candidate } from '../../components/Candidate'
 import { Election } from '../../components/Election';
 import { Header } from '../../components/Header';
-import { ElectionsPage } from '../ElectionsPage';
 import './style.css'
 
 export function CreateElectionPage() {
   const [candidates, setCandidates] = useState([])
-
   const [elections, setElections] = useState([])
   const [electionName, setElectionName] = useState('')
   const [electionDateBegin, setElectionDateBegin] = useState('')
@@ -90,23 +87,23 @@ export function CreateElectionPage() {
         }
 
         
-        <Button 
-          title="Criar nova eleição" 
-          onClicked={handleCreateNewElection}
-        />
+          <Button 
+            title="Criar nova eleição" 
+            onClicked={handleCreateNewElection}
+          />
 
         {
           Object.entries(elections).map(() => {
             return (
-              <Election 
+              <Election
                 key={Math.random()}
                 name={electionName}
                 dateBegin={electionDateBegin}
                 dateEnd={electionDateEnd}
               />
-
-            ) 
+            )
           })
+
         }
         
       </form>   

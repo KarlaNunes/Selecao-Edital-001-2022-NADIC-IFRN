@@ -18,7 +18,6 @@ export function Election({name, dateBegin, dateEnd}) {
           <Button title="Votar" />
         </li>
       </ul>
-
     </div>
   )
 }

@@ -1,5 +1,5 @@
 form {
-  margin: 100px 25% 0;
+  margin: 100px 20% 0;
   height: auto;
   display: flex;
   flex-direction: column;
@@ -28,6 +28,7 @@ form div {
 
 form label {
   margin-right: 30px;
+  font-size: 18px;
 }
 
 form input {
@@ -38,7 +39,7 @@ form input {
   height: 46px;
   margin-top: 5px;
 
-  font-size: 19px;
+  font-size: 18px;
   padding: 20px;
 }
 

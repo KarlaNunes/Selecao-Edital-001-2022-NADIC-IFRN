@@ -1,8 +1,7 @@
 export function ElectionsPage() {
-  const [elections, setElections] = useState([])
   return (
     <>
-      <h1>Lista de eleições</h1>
+      <h1>Página de Eleição</h1>      
     </>
   )
 }
